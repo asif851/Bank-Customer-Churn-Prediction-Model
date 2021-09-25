@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+<style>
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+input[type=submit] {
+  width: 30%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+  
+}
+
+div {
+  border-radius: 5px;
+  background-color: WhiteSmoke;
+  padding: 20px;
+  text-align: center;
+  margin:14px auto;
+  
+  
+
+}
+
+
+h1 {
+  
+  text-align: center;
+  background-color:Teal;
+  width:60%;
+  margin: 0px auto;
+  display; block;
+
+}
+h2 {
+  
+  color: WhiteSmoke;
+}
+
+
+input[type=text] {
+  width: 50%;
+  padding: 8px 5px;
+  margin: 10px 0;
+  box-sizing: border-box;
+
+
+}
+
+body{
+
+  background-color: Teal;
+}
+select{
+     width:10%;
+
+  }
+
+</style>
+
+
+
+<body> 
+  <h2>Machine Learning Application</h2>
+ <div class="login">
+    <h1>Predict customer churn</h1>
+
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+
+    <input type="text" name="CreditScore" placeholder="CreditScore" required="required" />
+    <br>  
+    <label for="Geography">Geography:</label>
+    <select name="Geography" id="Geography">
+    <option value="0">France</option>
+    <option value="1">Spain</option>
+    <option value="2">Germany</option>
+    </select>
+
+    <label for="Gender">Gender:</label>
+    <select name="Gender" id="Gender">
+    <option value="0">Male</option>
+    <option value="1">Female</option>
+    </select>
+    <br>
+    <input type="text" name="Age" placeholder="Age" required="required" />
+
+    <input type="text" name="Tenure" placeholder="tenure" required="required" />
+
+    <input type="text" name="Balance" placeholder="Balance" required="required" />
+
+    <input type="text" name="NumOfProducts" placeholder="NumOfProducts" required="required" />
+
+     <br>
+    <label for="HasCrCard">HasCrCard:</label>
+    <select name="HasCrCard" id="HasCrCard">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+    </select>
+
+    <label for="IsActiveMember">IsActiveMember:</label>
+    <select name="IsActiveMember" id="IsActiveMember">
+    <option value="1">Yes</option>
+    <option value="0">No</option>
+    </select>
+      <br>
+
+    <input type="text" name="EstimatedSalary" placeholder="EstimatedSalary" required="required" />
+    <br>
+    <input type="submit" value="Submit">
+    </form>
+
+   <br>
+   <br>
+   
+ </div>
+</body>
+</html>
